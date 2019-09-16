@@ -13,3 +13,6 @@
 [submodule "foundry"]
 	path = foundry
 	url = https://github.com/mundusnine/foundry.git
+[submodule "hscript"]
+	path = hscript
+	url = https://github.com/HaxeFoundation/hscript.git
