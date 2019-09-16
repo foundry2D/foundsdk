@@ -1,0 +1,12 @@
+[submodule "iron"]
+	path = iron
+	url = https://github.com/armory3d/iron.git
+[submodule "haxeui-core"]
+	path = haxeui-core
+	url = https://github.com/haxeui/haxeui-core.git
+[submodule "haxeui-kha"]
+	path = haxeui-kha
+	url = https://github.com/haxeui/haxeui-kha.git
+[submodule "haxeui-kha-extended"]
+	path = haxeui-kha-extended
+	url = https://github.com/mundusnine/haxeui-kha-extended.git
