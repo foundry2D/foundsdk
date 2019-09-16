@@ -10,3 +10,6 @@
 [submodule "haxeui-kha-extended"]
 	path = haxeui-kha-extended
 	url = https://github.com/mundusnine/haxeui-kha-extended.git
+[submodule "foundry"]
+	path = foundry
+	url = https://github.com/mundusnine/foundry.git
