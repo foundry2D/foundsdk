@@ -1,0 +1,43 @@
+{
+    "name":"Material.006_armtile",
+    "override_context":
+    {
+        "cull_mode":"none"
+    },
+    "contexts":
+    [
+        {
+            "name":"mesh",
+            "bind_constants":
+            [
+                {
+                    "name":"receiveShadow",
+                    "bool":true
+                }
+            ],
+            "bind_textures":
+            [
+                {
+                    "name":"ImageTexture",
+                    "file":"orc spritesheet calciumtrice.png",
+                    "min_filter":"point",
+                    "mag_filter":"point"
+                }
+            ]
+        },
+        {
+            "name":"shadowmap",
+            "bind_constants":[],
+            "bind_textures":
+            [
+                {
+                    "name":"ImageTexture",
+                    "file":"orc spritesheet calciumtrice.png",
+                    "min_filter":"point",
+                    "mag_filter":"point"
+                }
+            ]
+        }
+    ],
+    "shader":"Material_006_armtile_data/Material_006_armtile_data"
+}
