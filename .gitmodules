@@ -16,3 +16,6 @@
 [submodule "hscript"]
 	path = hscript
 	url = https://github.com/HaxeFoundation/hscript.git
+[submodule "iron_format"]
+	path = iron_format
+	url = https://github.com/armory3d/iron_format.git
