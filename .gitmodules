@@ -19,3 +19,12 @@
 [submodule "iron_format"]
 	path = iron_format
 	url = https://github.com/armory3d/iron_format.git
+[submodule "khafs"]
+	path = khafs
+	url = https://github.com/mundusnine/khafs.git
+[submodule "hxmath"]
+	path = hxmath
+	url = https://github.com/tbrosman/hxmath.git
+[submodule "echo"]
+	path = echo
+	url = https://github.com/AustinEast/echo.git
