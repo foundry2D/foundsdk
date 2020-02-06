@@ -1,6 +1,3 @@
-[submodule "iron"]
-	path = iron
-	url = https://github.com/armory3d/iron.git
 [submodule "haxeui-core"]
 	path = haxeui-core
 	url = https://github.com/haxeui/haxeui-core.git
@@ -10,15 +7,9 @@
 [submodule "haxeui-kha-extended"]
 	path = haxeui-kha-extended
 	url = https://github.com/mundusnine/haxeui-kha-extended.git
-[submodule "foundry"]
-	path = foundry
-	url = https://github.com/mundusnine/foundry.git
 [submodule "hscript"]
 	path = hscript
 	url = https://github.com/HaxeFoundation/hscript.git
-[submodule "iron_format"]
-	path = iron_format
-	url = https://github.com/armory3d/iron_format.git
 [submodule "khafs"]
 	path = khafs
 	url = https://github.com/mundusnine/khafs.git
@@ -28,3 +19,9 @@
 [submodule "echo"]
 	path = echo
 	url = https://github.com/AustinEast/echo.git
+[submodule "interpret"]
+	path = interpret
+	url = https://github.com/jeremyfa/interpret.git
+[submodule "haxeui-code-editor"]
+	path = haxeui-code-editor
+	url = https://github.com/haxeui/haxeui-code-editor.git
