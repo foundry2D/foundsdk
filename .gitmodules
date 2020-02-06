@@ -25,3 +25,9 @@
 [submodule "haxeui-code-editor"]
 	path = haxeui-code-editor
 	url = https://github.com/haxeui/haxeui-code-editor.git
+[submodule "foundry2d"]
+	path = foundry2d
+	url = https://github.com/mundusnine/foundry2d.git
+[submodule "editor"]
+	path = editor
+	url = https://github.com/mundusnine/editor.git
