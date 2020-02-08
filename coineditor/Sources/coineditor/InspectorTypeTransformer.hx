@@ -1,29 +1,54 @@
 package coineditor;
 
 import haxe.ui.data.transformation.IItemTransformer;
+#if found
+import echo.data.Options.ShapeOptions;
+#end
 
 class InspectorTypeTransformer implements IItemTransformer<Dynamic> {
     public function new() {
     }
 
-    public function transformFrom(i:Dynamic):Dynamic {
+    public function transformFrom(data:Dynamic):Dynamic {
         var o:Dynamic = null;
-        if (Std.is(i, String)) {
-            o = { tfield: i };
-        } else if (Std.is(i, Int) || Std.is(i, Float) || Std.is(i, Bool)) {
-            o = { value: i };
-        } else if(Reflect.hasField(i,"type") && Reflect.hasField(i,"class_name")){//TTrait
+        if (Std.is(data, String)) {
+            o = { tfield: data };
+        } else if (Std.is(data, Int) || Std.is(data, Float) || Std.is(data, Bool)) {
+            o = { value: data };
+        } else if(Reflect.hasField(data,"type") && Reflect.hasField(data,"class_name")){//TTrait
             var par:Array<String>=[];
-            if(Reflect.hasField(i,"props")){
-                var a:Array<String> = i.props; 
+            if(Reflect.hasField(data,"props")){
+                var a:Array<String> = data.props; 
                 for(p in a){
                     par.push(this.transformFrom(p));
                 }
             }
-            var t:Array<String> = i.class_name.split(".");
-            o = {type: "img/"+i.type.toLowerCase(), name: t[t.length-1],nameClass: i.class_name,props: par};
+            var t:Array<String> = data.class_name.split(".");
+            o = {type: "img/"+data.type.toLowerCase(), name: t[t.length-1],nameClass: data.class_name,props: par};
+        }else if(Reflect.hasField(data,"kinematic") && Reflect.hasField(data,"mass")){
+            o = {};
+            for(field in Reflect.fields(data)){
+                if(field != "shapes")
+                    Reflect.setField(o,field,this.transformFrom(Reflect.field(data,field)));
+            }
+            var par:Array<Dynamic>=[];
+            if(Reflect.hasField(data,"shapes")){
+                var a:Array<ShapeOptions> = data.shapes; 
+                for(p in a){
+                    par.push(this.transformFrom(p));
+                }
+                o.shapes = par;
+            }
+        }else if(Reflect.hasField(data,"solid") && Reflect.hasField(data,"type")){
+            o = {};
+            for( field in Reflect.fields(data)){
+                if(field != "width" && field != "height")
+                    Reflect.setField(o,field,this.transformFrom(Reflect.field(data,field)));
+                else
+                    Reflect.setField(o,field.charAt(0),this.transformFrom(Reflect.field(data,field)));
+            }
         }else {
-            o = i;
+            o = data;
         }
         return o;
     }
