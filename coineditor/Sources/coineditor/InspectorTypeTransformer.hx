@@ -23,8 +23,15 @@ class InspectorTypeTransformer implements IItemTransformer<Dynamic> {
                     par.push(this.transformFrom(p));
                 }
             }
-            var t:Array<String> = data.class_name.split(".");
-            o = {type: "img/"+data.type.toLowerCase(), name: t[t.length-1],nameClass: data.class_name,props: par};
+            var name = "";
+            if(data.type == "VisualScript"){
+                var t:Array<String> = data.class_name.split("/");
+                name = t[t.length-1].split('.')[0];
+            } else {
+                var t:Array<String> = data.class_name.split(".");
+                name = t[t.length-1];
+            }
+            o = {type: "img/"+data.type.toLowerCase(), name: name,nameClass: data.class_name,props: par};
         }else if(Reflect.hasField(data,"kinematic") && Reflect.hasField(data,"mass")){
             o = {};
             for(field in Reflect.fields(data)){
