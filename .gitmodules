@@ -4,9 +4,6 @@
 [submodule "haxeui-kha"]
 	path = haxeui-kha
 	url = https://github.com/haxeui/haxeui-kha.git
-[submodule "haxeui-kha-extended"]
-	path = haxeui-kha-extended
-	url = https://github.com/mundusnine/haxeui-kha-extended.git
 [submodule "hscript"]
 	path = hscript
 	url = https://github.com/HaxeFoundation/hscript.git
