@@ -25,6 +25,3 @@
 [submodule "editor"]
 	path = editor
 	url = https://github.com/mundusnine/editor.git
-[submodule "zui"]
-	path = zui
-	url = https://github.com/armory3d/zui.git
