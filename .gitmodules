@@ -16,9 +16,6 @@
 [submodule "echo"]
 	path = echo
 	url = https://github.com/AustinEast/echo.git
-[submodule "interpret"]
-	path = interpret
-	url = https://github.com/jeremyfa/interpret.git
 [submodule "haxeui-code-editor"]
 	path = haxeui-code-editor
 	url = https://github.com/haxeui/haxeui-code-editor.git
