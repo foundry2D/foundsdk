@@ -1,6 +1,3 @@
-[submodule "haxeui-kha"]
-	path = haxeui-kha
-	url = https://github.com/haxeui/haxeui-kha.git
 [submodule "hscript"]
 	path = hscript
 	url = https://github.com/HaxeFoundation/hscript.git
