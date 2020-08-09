@@ -1,6 +1,3 @@
-[submodule "haxeui-core"]
-	path = haxeui-core
-	url = https://github.com/haxeui/haxeui-core.git
 [submodule "haxeui-kha"]
 	path = haxeui-kha
 	url = https://github.com/haxeui/haxeui-kha.git
