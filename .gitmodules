@@ -9,10 +9,7 @@
 	url = https://github.com/tbrosman/hxmath.git
 [submodule "echo"]
 	path = echo
-	url = https://github.com/AustinEast/echo.git
-[submodule "haxeui-code-editor"]
-	path = haxeui-code-editor
-	url = https://github.com/haxeui/haxeui-code-editor.git
+	url = https://github.com/foundry2D/echo.git
 [submodule "foundry2d"]
 	path = foundry2d
 	url = https://github.com/mundusnine/foundry2d.git
