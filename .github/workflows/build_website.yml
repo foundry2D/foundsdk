@@ -29,7 +29,7 @@ jobs:
     - name: Compile
       run:  cd Empty && ../nodejs_bin/node ../Kha/make.js -t html5 --debug
     - name: Copy build files
-      run:  cp -r Empty/build/html5 websites/sites/foundry/generated
+      run:  cp -r Empty/build/html5/* websites/sites/foundry/generated
     - name: Set name
       run: git config --global user.name "foundbot"
     - name: Set email
