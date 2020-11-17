@@ -29,7 +29,7 @@ jobs:
     - name: Get Foundsdk
       run: git clone --recursive https://github.com/foundry2D/foundsdk.git
     - name: Move up
-      run: cd .. && ls
+      run: cd ../.. && ls
     - name: Compile
       run:  ../nodejs_bin/node ../Kha/make.js -t html5 --debug
     - name: Ls build 
