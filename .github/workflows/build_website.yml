@@ -16,18 +16,22 @@ jobs:
     - uses: actions/checkout@v1
     - name: Get Kha
       run: git clone --recursive https://github.com/Kode/Kha
+    - name: Get websites
+      run: git clone -b editor https://github.com/mundusnine/websites.git
+    - name: Get Node.js
+      run: git clone https://github.com/Kode/nodejs_bin.git --depth 1
+    - name: Setup Node.js 
+      run: nodejs_bin/copysysbin.sh
     - name: Get Empty
       run: git clone https://github.com/foundry2D/Empty.git
     - name: Cd into Libraries
       run: cd Empty/Libraries
     - name: Get Foundsdk
-      run: git clone --recursive https://github.com/foundry2D/foundsdk.git && cd ../..
-    - name: Get websites
-      run: git clone -b editor https://github.com/mundusnine/websites.git
+      run: git clone --recursive https://github.com/foundry2D/foundsdk.git && cd ..
     - name: Compile
-      run:  Kha/make.sh -t html5 --debug --from ../Empty --to ../build --compile
+      run:  ../nodejs_bin/node ../Kha/make.js -t html5 --debug
     - name: Ls build 
-      run: ls ./build
+      run: ls ./Empty/build/html5
     - name: Copy wasm binary
       run:  cp ./build/kore.wasm Kinc_bin/Kinc_webgl.wasm
     - name: Copy js binary
