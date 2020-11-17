@@ -29,7 +29,7 @@ jobs:
     - name: Move up
       run:  ls
     - name: Compile
-      run:  ./nodejs_bin/node ./Kha/make.js -t html5 --from ./Empty --debug
+      run:  ./nodejs_bin/node ./Kha/make.js -t html5 --from Empty --debug
     - name: Ls build 
       run: ls ./Empty/build/html5
     - name: Copy wasm binary
