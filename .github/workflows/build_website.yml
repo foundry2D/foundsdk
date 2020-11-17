@@ -25,7 +25,7 @@ jobs:
     - name: Get websites
       run: git clone -b editor https://github.com/mundusnine/websites.git
     - name: Compile
-      run:  Kha/make.sh -t html5 --debug --from ./Empty --to ./build --compile
+      run:  Kha/make.sh -t html5 --debug --from ../Empty --to ../build --compile
     - name: Ls build 
       run: ls ./build
     - name: Copy wasm binary
