@@ -34,6 +34,8 @@ jobs:
       run: git config --global user.name "foundbot"
     - name: Set email
       run: git config --global user.email "foundry2dbot@gmail.com"
+    - name: Git add
+      run: git -C websites add *
     - name: Commit binary
       run: git -C websites commit -a -m "Update editor binary to $GITHUB_SHA."
     - name: Tag binary
