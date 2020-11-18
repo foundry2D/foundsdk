@@ -1,4 +1,4 @@
-name: HTML5Library(WebGL)
+name: HTML5
 
 on:
   push:
@@ -30,6 +30,8 @@ jobs:
       run:  cd Empty && ../nodejs_bin/node ../Kha/make.js -t html5 --debug
     - name: Copy build files
       run:  cp -r Empty/build/html5/* websites/sites/foundry/generated
+    - name: Copy listTraits
+      run:  cp -r Empty/Assets/listTraits.json websites/sites/foundry/generated/listTraits.json
     - name: Set name
       run: git config --global user.name "foundbot"
     - name: Set email
